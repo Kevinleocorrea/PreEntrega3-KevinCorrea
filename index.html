@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Asociacion Atletico Primera Junta</h1>
+    </header>
+    <section class="form-jugadores"> 
+        <h4>Convocatoria</h4> 
+        <form id="jugadorForm"> 
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required> 
+            <input class="controls" type="number" name="edad" id="edad" placeholder="Ingrese su edad" required> 
+            <input class="controls" type="number" name="altura" id="altura" placeholder="Ingrese su altura" step="0.01" required> 
+            <input class="controls" type="number" name="primeraNota" id="primeraNota" placeholder="Ingrese su primera nota" min="1" max="10" required> 
+            <input class="controls" type="number" name="segundaNota" id="segundaNota" placeholder="Ingrese su segunda nota" min="1" max="10" required> 
+            <input class="botons" type="submit" value="Agregar Jugador"> 
+        </form> 
+    </section> 
+
+    <section class="form-jugadores">
+        <h4>Ordenar y Filtrar Jugadores</h4>
+        <button class="botons" onclick="ordenarPorNombre()">Ordenar por Nombre</button>
+        <button class="botons" onclick="ordenarPorEdad()">Ordenar por Edad</button>
+        <button class="botons" onclick="ordenarPorAltura()">Ordenar por Altura</button>
+        <button class="botons" onclick="filtrarPorEstado('Citado')">Filtrar Citados</button>
+        <button class="botons" onclick="filtrarPorEstado('No Citado')">Filtrar No Citados</button>
+        <button class="botons" onclick="mostrarTodos()">Mostrar Todos</button>
+    </section>
+    
+    <ul id="listaJugadores"></ul>
+
+    <script src="./index.js"></script> 
+</body>
+</html>
